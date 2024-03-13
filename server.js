@@ -13,7 +13,7 @@ const app = express();
 
 const corsOptions = {
 
-    origin:"http://localhost:3000",
+    origin:["http://localhost:3000", "https://claim-client-dun.vercel.app"],
     methods: "GET, POST, DELETE, PUT, PATCH",
     credentials: true
 
