@@ -254,6 +254,38 @@ router.delete('/delete_policy/:id', async (req, res) => {
   });
 
 
+  //UPDATE A POLICY 
+  router.patch('/update_policy/:id', async (req, res) => {
+    try {
+        const policyId = req.params.id;
+        const { policyName, policyNumber, premium, sumAssured, startDate, endDate } = req.body;
+
+        // Find the policy by ID
+        let updatedPolicy = await Policy.findById(policyId);
+
+        if (!updatedPolicy) {
+            return res.status(404).json({ error: 'Policy not found' });
+        }
+
+        // Update the fields with the new data
+        if (policyName) updatedPolicy.policyName = policyName;
+        if (policyNumber) updatedPolicy.policyNumber = policyNumber;
+        if (premium) updatedPolicy.premium = premium;
+        if (sumAssured) updatedPolicy.sumAssured = sumAssured;
+        if (startDate) updatedPolicy.startDate = startDate;
+        if (endDate) updatedPolicy.endDate = endDate;
+
+        // Save the updated policy
+        updatedPolicy = await updatedPolicy.save();
+
+        res.json({ message: 'Policy updated successfully', updatedPolicy });
+    } catch (err) {
+        console.error('Error updating policy:', err);
+        res.status(500).json({ error: 'Error updating policy' });
+    }
+});
+
+
   // ADMIN CAN GET ALL CLAIMS 
 
   router.get('/claims', authenticate, async (req, res) => {

@@ -1,7 +1,5 @@
 require('dotenv').config();
-
 const express = require('express');
-
 
 //mongodb
 require('./db');
@@ -9,16 +7,8 @@ const cors = require('cors');
 // const swaggerJsdoc = require('swagger-jsdoc');
 // const swaggerUi = require('swagger-ui-express');
 const router = express.Router();
-
 const swaggerJsdoc = require('swagger-jsdoc');
 const swaggerUi = require('swagger-ui-express');
-
-
-
-
-
-
-
 const app = express();
 
 const corsOptions = {
