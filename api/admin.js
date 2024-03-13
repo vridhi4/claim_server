@@ -85,13 +85,13 @@ router.post('/register', (req, res) => {
 //ADMIN CAN LLOGIN
 router.post('/login', (req,res) => {
 
-    console.log("login here")
-
     const body = req.body;
     console.log(body)
-    
-    Password=body.Password
-    Username=body.Username
+
+    const {password, username} = body;
+    const Username = username;
+    const Password = password
+
 
     if(Username == "" || Password == "")
     {

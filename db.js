@@ -9,7 +9,7 @@ require('./models/admin')
 //connection 
 
 mongoose
-.connect('mongodb://localhost:27017/database-2')
+.connect('mongodb+srv://vridhikatariya32:vridhiClaimsDB@cluster0.2qxax4m.mongodb.net/database-2')
 .then(() => console.log("MongoDB connected") )
 .catch((err) => console.log("Mongo error", err));
 
