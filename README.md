@@ -21,5 +21,29 @@ Admin:-
 7. Create a New Policy 
 8. Delete a Policy 
 
+Features
+RESTful API endpoints for interacting with the application/database
+Middleware for handling requests, authentication, and error handling
+Integration with a database (e.g., MongoDB, PostgreSQL)
+CORS configuration for handling cross-origin requests
+Environment variables configuration for sensitive data
+Technologies Used
+Node.js: JavaScript runtime for building server-side applications
+Express.js: Web application framework for Node.js
+[Database]: MongoDB
+[Authentication]: JWT
+[Testing Framework]: Swagger, Postman
+
+Installation
+Clone the repository:
+git clone https://github.com/vridhi4/claim-server.git
+
+Install dependencies
+
+cd claim-server
+npm install
+
+Start the server:
+npm start
  
 
