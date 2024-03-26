@@ -15,7 +15,12 @@ const claimsSchema = new Schema({
 
 
 
-});
+},
+{
+    timestamps: true
+
+}
+);
 
 const Claim = mongoose.model('ClaimSchema', claimsSchema);
 module.exports = Claim;

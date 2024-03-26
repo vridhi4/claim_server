@@ -21,7 +21,12 @@ const policyHolderSchema = new Schema({
 
     
   }]
-});
+},
+{
+  timestamps: true
+
+}
+);
 
 const PolicyHolder = mongoose.model('PolicyHolder', policyHolderSchema);
 module.exports = PolicyHolder;
