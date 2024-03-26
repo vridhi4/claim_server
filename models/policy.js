@@ -28,7 +28,12 @@ const policySchema = new Schema({
         type: Date,
        
     }
-});
+},
+{
+    timestamps: true
+
+}
+);
 
 // Custom setter function to store only date part
 
